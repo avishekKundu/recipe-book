@@ -25,34 +25,42 @@ const RecipeBook = () => {
     return (
         <>
             <div className="container-fluid p-4 headContainer">
-                <div className="container-fluid p-3 border border-dark border-3 titleHead">
+                <div className="container-fluid p-2 titleHead">
                     <center>Recipe Book</center>
                 </div>
-                <div className="container-fluid p-3 border border-dark border-3 d-flex justify-content-center inputContainer">
-                    <input
-                        type="text"
-                        placeholder="Enter recipe name"
-                        value={recipes.name} onChange={(e) => setRecipes({ ...recipes, name: e.target.value })} />
-                    <textarea
-                        className="ingredientContainer"
-                        placeholder="Enter recipe ingredients"
-                        value={recipes.ingredients} onChange={(e) => setRecipes({ ...recipes, ingredients: e.target.value })} />
-                    <input
-                        type="text"
-                        placeholder="Enter category"
-                        value={recipes.category} onChange={(e) => setRecipes({ ...recipes, category: e.target.value })} />
-                    <button onClick={addRecipe} className="btn btn-primary btnAdd">Add Recipe</button>
+                <div className="container-fluid d-flex justify-content-between inputContainer">
+                    <div>
+                        <input
+                            className="border border-4 border-secondary recipeNameContainer"
+                            type="text"
+                            placeholder="Enter recipe name"
+                            value={recipes.name} onChange={(e) => setRecipes({ ...recipes, name: e.target.value })} />
+                    </div>
+                    <div>
+                        <textarea
+                            className="border border-4 border-secondary ingredientContainer"
+                            placeholder="Enter recipe ingredients"
+                            value={recipes.ingredients} onChange={(e) => setRecipes({ ...recipes, ingredients: e.target.value })} />
+                    </div>
+                    <div>
+                        <input
+                            className="border border-4 border-secondary categoryContainer"
+                            type="text"
+                            placeholder="Enter category"
+                            value={recipes.category} onChange={(e) => setRecipes({ ...recipes, category: e.target.value })} />
+                        <button onClick={addRecipe} className="btn btn-primary border border-4 btnAdd">Add Recipe</button>
+                    </div>
                 </div>
-                <div className="container-fluid p-3 border border-dark border-3 recipeContainer">
-                    <ul className="list-group" id="recipe-list">
+                <div className="container-fluid recipeListContainer">
+                    <ul className="list-group recipe-list">
                         {recipeList.map((recipe, index) => (
                             <li key={index} className="recipeLists">
-                                <div className="card p-3 listContainer">
+                                <div className="card p-2 listContainer">
                                     <div className="card-body cardBody">
-                                        <p className="card-text recipeCategory">Category: {recipe.category}</p>
-                                        <p className="card-text recipeName">Recipe: {recipe.name}</p>
-                                        <p className="card-text recipeIngredient">Ingredients:  {recipe.ingredients}</p>
-                                        <button onClick={() => deleteRecipe(index)} className="btn btn-primary btnRemove">Delete</button>
+                                        <p className="card-text recipeCategory"><span>Category:</span> {recipe.category}</p>
+                                        <p className="card-text recipeName"><span>Recipe:</span> {recipe.name}</p>
+                                        <p className="card-text recipeIngredient"><span>Ingredients:</span>  {recipe.ingredients}</p>
+                                        <button onClick={() => deleteRecipe(index)} className="btn btn-primary border border-3 btnRemove">Delete</button>
                                     </div>
                                 </div>
                             </li>

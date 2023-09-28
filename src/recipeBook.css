@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -5,5 +8,126 @@
 }
 
 .headContainer {
-    
+    background-image: url('../public/backgroundImg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.titleHead {
+    color: black;
+    margin: 0px auto;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.inputContainer {
+    height: 150px;
+    padding: 25px;
+    width: 1050px;
+    margin-bottom: 15px;
+}
+
+.recipeNameContainer {
+    width: 190px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+
+    &:hover {
+        box-shadow: 0 0 6px;
+    }
+}
+
+.ingredientContainer {
+    height: 100px;
+    width: 350px;
+    padding-top: 5px;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+
+    &:hover {
+        box-shadow: 0 0 6px;
+    }
+}
+
+.categoryContainer {
+    width: 190px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    border-radius: 10px;
+    font-size: 20px;
+
+    &:hover {
+        box-shadow: 0 0 6px;
+    }
+}
+
+.btnAdd {
+    margin-left: 20px;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 8px;
+    }
+}
+
+.recipeListContainer {
+    height: 396px;
+    width: 98%;
+    padding: 10px;
+    overflow: auto;
+    text-align: justify;
+    scroll-behavior: smooth;
+}
+
+.recipe-list {
+    padding: 15px 10px;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 18px 20px;
+}
+
+.recipeLists {
+    padding: 8px 10px;
+}
+
+.listContainer {
+    border: 3px solid black;
+    border-radius: 8px;
+    height: 335px;
+    width: 300px;
+    overflow: auto;
+    text-align: justify;
+    box-shadow: 0 0 8px;
+}
+
+.cardBody p {
+    font-size: 21px;
+    font-family: 'GFS Didot', serif;
+    padding-left: 5px;
+}
+
+.cardBody span {
+    padding: 2px;
+    font-size: 29px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+.btnRemove {
+    font-size: 20px;
+    display: block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 10px #0d6efd;
+    }
 }
