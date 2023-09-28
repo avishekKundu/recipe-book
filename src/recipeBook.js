@@ -32,15 +32,15 @@ const RecipeBook = () => {
                     <input
                         type="text"
                         placeholder="Enter recipe name"
-                        value={recipes.name} onChange={(e) => setRecipes({ ...recipes, name: e.target.value })} /> <br />
-                    <br /> <textarea
+                        value={recipes.name} onChange={(e) => setRecipes({ ...recipes, name: e.target.value })} />
+                    <textarea
                         placeholder="Enter recipe ingredients"
-                        value={recipes.ingredients} onChange={(e) => setRecipes({ ...recipes, ingredients: e.target.value })} /> <br />
-                    <br /> <input
+                        value={recipes.ingredients} onChange={(e) => setRecipes({ ...recipes, ingredients: e.target.value })} />
+                    <input
                         type="text"
                         placeholder="Enter category"
-                        value={recipes.category} onChange={(e) => setRecipes({ ...recipes, category: e.target.value })} /> <br />
-                    <br /> <button onClick={addRecipe} className="btn btn-primary btnAdd">Add Recipe</button>
+                        value={recipes.category} onChange={(e) => setRecipes({ ...recipes, category: e.target.value })} />
+                    <button onClick={addRecipe} className="btn btn-primary btnAdd">Add Recipe</button>
                 </div>
                 <div className="container-fluid p-3 border border-dark border-3 recipeContainer">
                     <ul className="list-group" id="recipe-list">
