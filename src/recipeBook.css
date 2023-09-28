@@ -133,21 +133,3 @@
         box-shadow: 0 0 10px #dc3545;
     }
 }
-
-@media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
-    .recipeNameContainer {
-        width: 60%;
-    }
-
-    .ingredientContainer {
-        width: 60%;
-    }
-
-    .categoryContainer {
-        width: 60%;
-    }
-
-    .btnAdd {
-        width: 30%;
-    }
-}
