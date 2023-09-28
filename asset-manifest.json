@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/recipe-book/static/css/main.e9204fc7.css",
+    "main.js": "/recipe-book/static/js/main.7679f86f.js",
+    "static/js/787.9f2d37de.chunk.js": "/recipe-book/static/js/787.9f2d37de.chunk.js",
+    "static/media/backgroundImg.jpg": "/recipe-book/static/media/backgroundImg.599968056826e679d81e.jpg",
+    "index.html": "/recipe-book/index.html",
+    "main.e9204fc7.css.map": "/recipe-book/static/css/main.e9204fc7.css.map",
+    "main.7679f86f.js.map": "/recipe-book/static/js/main.7679f86f.js.map",
+    "787.9f2d37de.chunk.js.map": "/recipe-book/static/js/787.9f2d37de.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e9204fc7.css",
+    "static/js/main.7679f86f.js"
+  ]
+}
