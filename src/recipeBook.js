@@ -24,16 +24,17 @@ const RecipeBook = () => {
 
     return (
         <>
-            <div >
-                <div>
+            <div className="container-fluid p-4 headContainer">
+                <div className="container-fluid p-3 border border-dark border-3 titleHead">
                     <center>Recipe Book</center>
                 </div>
-                <div>
+                <div className="container-fluid p-3 border border-dark border-3 d-flex justify-content-center inputContainer">
                     <input
                         type="text"
                         placeholder="Enter recipe name"
                         value={recipes.name} onChange={(e) => setRecipes({ ...recipes, name: e.target.value })} />
                     <textarea
+                        className="ingredientContainer"
                         placeholder="Enter recipe ingredients"
                         value={recipes.ingredients} onChange={(e) => setRecipes({ ...recipes, ingredients: e.target.value })} />
                     <input
