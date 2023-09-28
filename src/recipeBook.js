@@ -60,7 +60,7 @@ const RecipeBook = () => {
                                         <p className="card-text recipeCategory"><span>Category:</span> {recipe.category}</p>
                                         <p className="card-text recipeName"><span>Recipe:</span> {recipe.name}</p>
                                         <p className="card-text recipeIngredient"><span>Ingredients:</span>  {recipe.ingredients}</p>
-                                        <button onClick={() => deleteRecipe(index)} className="btn btn-primary border border-3 btnRemove">Delete</button>
+                                        <button onClick={() => deleteRecipe(index)} className="btn btn-danger border border-3 btnRemove">Delete</button>
                                     </div>
                                 </div>
                             </li>
