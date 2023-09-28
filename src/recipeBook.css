@@ -28,6 +28,8 @@
     padding: 25px;
     width: 1050px;
     margin-bottom: 15px;
+    overflow: auto;
+    text-align: justify;
 }
 
 .recipeNameContainer {
