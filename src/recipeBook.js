@@ -10,7 +10,7 @@ const RecipeBook = () => {
     });
 
     const addRecipe = () => {
-        if (recipes.name.trim() === '' || recipes.ingredients.trim === '' || recipes.category.trim === '')
+        if (recipes.name.trim() === '' || recipes.ingredients.trim() === '' || recipes.category.trim() === '')
             return;
         setRecipeList([...recipeList, recipes]);
         setRecipes({ name: '', ingredients: '', category: '' });
