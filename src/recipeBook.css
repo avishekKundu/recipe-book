@@ -8,10 +8,12 @@
 }
 
 .headContainer {
+    height: 100%;
+    min-height: 100vh;
+    max-height: 100%;
     background-image: url('../public/backgroundImg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
 }
 
 .titleHead {
@@ -22,18 +24,31 @@
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
+.main_page{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+}
+.recipe_main {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
 
 .inputContainer {
-    height: 150px;
     padding: 25px;
-    width: 1050px;
     margin-bottom: 15px;
     overflow: auto;
     text-align: justify;
+    display: flex !important;
+    flex-direction: column;
+    width: 45%;
+    height: 400px;
 }
 
 .recipeNameContainer {
-    width: 190px;
+    width: 100%;
     padding-left: 10px;
     border-radius: 10px;
     font-size: 20px;
@@ -45,7 +60,7 @@
 
 .ingredientContainer {
     height: 100px;
-    width: 350px;
+    width: 100%;
     padding-top: 5px;
     padding-left: 10px;
     border-radius: 10px;
@@ -57,7 +72,7 @@
 }
 
 .categoryContainer {
-    width: 190px;
+    width: 100%;
     padding-left: 10px;
     padding-bottom: 3px;
     border-radius: 10px;
@@ -68,9 +83,16 @@
     }
 }
 
-.btnAdd {
-    margin-left: 20px;
-    border-radius: 12px;
+.button_base {
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.add_btn {
+    border-radius: 7px;
+    padding: 10px;
+
     &:hover {
         cursor: pointer;
         box-shadow: 0 0 8px;
@@ -78,7 +100,7 @@
 }
 
 .recipeListContainer {
-    height: 396px;
+    height: 80vh;
     width: 98%;
     padding: 10px;
     overflow: auto;
@@ -90,11 +112,13 @@
     padding: 15px 10px;
     list-style-type: none;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     gap: 18px 20px;
+    justify-content: space-evenly;
 }
 
 .recipeLists {
+    width: fit-content;
     padding: 8px 10px;
 }
 
@@ -102,7 +126,7 @@
     border: 3px solid black;
     border-radius: 8px;
     height: 335px;
-    width: 300px;
+    width: 230px;
     overflow: auto;
     text-align: justify;
     box-shadow: 0 0 8px;
@@ -131,5 +155,324 @@
     &:hover {
         cursor: pointer;
         box-shadow: 0 0 10px #dc3545;
+    }
+}
+
+@media (min-width:900px) and (max-width:1290px) {
+    .recipe-list {
+        padding: 15px 10px;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 18px 20px;
+        justify-content: space-evenly;
+    }
+}
+@media (min-width:600px) and (max-width:900px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .headContainer {
+        height: 100%;
+        min-height: 100vh;
+        max-height: 100%;
+        background-image: url('../public/backgroundImg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .titleHead {
+        color: black;
+        margin: 0px auto;
+        margin-bottom: 20px;
+        font-size: 50px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+    }
+
+    .recipe_main {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .inputContainer {
+        padding: 25px;
+        margin-bottom: 15px;
+        overflow: auto;
+        text-align: justify;
+        display: flex !important;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .recipeNameContainer {
+        width: 100%;
+        padding-left: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+
+        &:hover {
+            box-shadow: 0 0 6px;
+        }
+    }
+
+    .ingredientContainer {
+        height: 100px;
+        width: 100%;
+        padding-top: 5px;
+        padding-left: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+
+        &:hover {
+            box-shadow: 0 0 6px;
+        }
+    }
+
+    .categoryContainer {
+        width: 100%;
+        padding-left: 10px;
+        padding-bottom: 3px;
+        border-radius: 10px;
+        font-size: 20px;
+
+        &:hover {
+            box-shadow: 0 0 6px;
+        }
+    }
+
+    .button_base {
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .add_btn {
+        border-radius: 7px;
+        padding: 10px;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 8px;
+        }
+    }
+
+    .recipeListContainer {
+        height: 396px;
+        display: flex;
+        padding: 10px;
+        overflow: auto;
+        text-align: justify;
+        scroll-behavior: smooth;
+        justify-content: center;
+    }
+
+    .recipe-list {
+        padding: 15px 10px;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: auto;
+        gap: 18px 20px;
+    }
+
+    .recipeLists {
+        padding: 8px 10px;
+    }
+
+    .listContainer {
+        border: 3px solid black;
+        border-radius: 8px;
+        height: 335px;
+        width: 300px;
+        overflow: auto;
+        text-align: justify;
+        box-shadow: 0 0 8px;
+    }
+
+    .cardBody p {
+        font-size: 21px;
+        font-family: 'GFS Didot', serif;
+        padding-left: 5px;
+    }
+
+    .cardBody span {
+        padding: 2px;
+        font-size: 29px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+    }
+
+    .btnRemove {
+        font-size: 20px;
+        display: block;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 10px #dc3545;
+        }
+    }
+}
+
+
+
+
+@media (min-width:300px) and (max-width:600px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .headContainer {
+        height: 100%;
+        min-height: 100vh;
+        max-height: 100%;
+        background-image: url('../public/backgroundImg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .titleHead {
+        color: black;
+        margin: 0px auto;
+        margin-top: -20px;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+    }
+
+    .recipe_main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inputContainer {
+        padding: 25px;
+        margin-bottom: 15px;
+        overflow: auto;
+        text-align: justify;
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    input {
+        margin-bottom: 20px;
+    }
+
+    .recipeNameContainer {
+        width: 100%;
+        padding: 2px 10px;
+        border-radius: 10px;
+        font-size: 16px;
+
+        &:hover {
+            box-shadow: 0 0 6px;
+        }
+    }
+
+    .ingredientContainer {
+        height: 100px;
+        width: 100%;
+        padding: 2px 10px;
+        border-radius: 10px;
+        font-size: 16px;
+
+        &:hover {
+            box-shadow: 0 0 6px;
+        }
+    }
+
+    .categoryContainer {
+        width: 100%;
+        padding: 2px 10px;
+        border-radius: 10px;
+        font-size: 16px;
+
+        &:hover {
+            box-shadow: 0 0 6px;
+        }
+    }
+
+    .button_base {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .add_btn {
+        margin-top: 15px;
+        border-radius: 7px;
+        padding: 5px;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 8px;
+        }
+    }
+
+    .recipeListContainer {
+        height: auto;
+        display: flex;
+        padding: 10px;
+        overflow: auto;
+        text-align: justify;
+        scroll-behavior: smooth;
+        justify-content: center;
+    }
+
+    .recipe-list {
+        padding: 15px 10px;
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: auto;
+        gap: 18px 20px;
+    }
+
+    .recipeLists {
+        padding: 8px 10px;
+    }
+
+    .listContainer {
+        border: 3px solid black;
+        border-radius: 8px;
+        height: 335px;
+        width: 260px;
+        overflow: auto;
+        text-align: justify;
+        box-shadow: 0 0 8px;
+    }
+
+    .cardBody p {
+        font-size: 21px;
+        font-family: 'GFS Didot', serif;
+        padding-left: 5px;
+    }
+
+    .cardBody span {
+        padding: 2px;
+        font-size: 29px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+    }
+
+    .btnRemove {
+        font-size: 20px;
+        display: block;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 10px #dc3545;
+        }
     }
 }
